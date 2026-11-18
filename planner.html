@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan a Trip | WanderWise</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark">W</span> WanderWise</a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav">
+            <a href="index.html">Home</a><a href="destinations.html">Destinations</a>
+            <a class="active" href="planner.html">Plan a trip</a><a href="about.html">About</a><a class="nav-cta" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero planner-hero">
+            <p class="eyebrow light">MAKE SPACE FOR SOMETHING NEW</p>
+            <h1>Let's plan a<br><em>good getaway.</em></h1>
+            <p>A few details are all it takes to start shaping your next adventure.</p>
+        </section>
+
+        <section class="section planner-layout">
+            <div class="planner-intro">
+                <p class="eyebrow">YOUR TRIP, YOUR RULES</p>
+                <h2>Start with the basics.</h2>
+                <p>Use this simple planner to create a trip summary. Your latest plan is saved in this browser, so you can come back to it later on the same device.</p>
+                <div class="planner-tip"><span>✦</span><p><strong>Travel tip</strong><br>Leave a little unscheduled time in your itinerary. Some of the best discoveries are unplanned.</p></div>
+            </div>
+
+            <form class="planner-form" id="trip-form">
+                <div class="form-heading"><span class="step-number">01</span><div><h2>Trip details</h2><p>Tell us what you're dreaming about.</p></div></div>
+                <label for="traveller-name">Your name</label>
+                <input type="text" id="traveller-name" name="name" placeholder="e.g. Alex" required>
+
+                <label for="destination">Where would you like to go?</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter a destination" required>
+
+                <div class="form-two-columns">
+                    <div><label for="start-date">Start date</label><input type="date" id="start-date" name="startDate" required></div>
+                    <div><label for="end-date">End date</label><input type="date" id="end-date" name="endDate" required></div>
+                </div>
+
+                <div class="form-two-columns">
+                    <div><label for="travellers">Travellers</label><select id="travellers" name="travellers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+                    <div><label for="budget">Approx. budget (per person)</label><select id="budget" name="budget"><option>Under ₹10,000</option><option>₹10,000 – ₹25,000</option><option>₹25,000 – ₹50,000</option><option>₹50,000 – ₹1,00,000</option><option>Above ₹1,00,000</option></select></div>
+                </div>
+
+                <label for="travel-style">What kind of trip?</label>
+                <select id="travel-style" name="style"><option>Nature and outdoors</option><option>Food and culture</option><option>Relaxation</option><option>Adventure</option><option>A little bit of everything</option></select>
+
+                <label for="notes">Anything else? <span class="optional">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Interests, places you want to visit, or special notes..."></textarea>
+
+                <button class="button button-dark full-button" type="submit">Create my trip summary <span>→</span></button>
+                <p class="form-message" id="planner-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="section saved-section" id="saved-section" hidden>
+            <div class="section-heading left-heading"><p class="eyebrow">YOUR TRAVEL NOTES</p><h2>Latest trip plan</h2></div>
+            <article class="saved-trip" id="saved-trip"></article>
+            <button class="button button-outline" id="clear-trip" type="button">Clear saved plan</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark">W</span> WanderWise</a>
+        <p>Thoughtful journeys begin with a little curiosity.</p>
+        <div class="footer-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="contact.html">Contact</a></div>
+        <small>© <span data-year></span> WanderWise. Student project for HTML5 & CSS3.</small>
+    </footer>
+</body>
+</html>
